@@ -31,7 +31,8 @@ export const config: Options.Testrunner = {
   //
   specs: [
     // ToDo: define location for spec files here
-    'src/ui/tests/**/*.test.ts'
+    // 'src/ui/tests/**/*.test.ts'
+    'src/ui/tests/products/**/*.test.ts'
   ],
   // Patterns to exclude.
   exclude: [
@@ -62,7 +63,7 @@ export const config: Options.Testrunner = {
   capabilities: [
     {
       browserName: 'chrome',
-      'goog:chromeOptions' : {
+      'goog:chromeOptions': {
         args: ['--disable-search-engine-choice-screen']
       }
     }

@@ -61,7 +61,10 @@ export const config: Options.Testrunner = {
   //
   capabilities: [
     {
-      browserName: 'chrome'
+      browserName: 'chrome',
+      'goog:chromeOptions' : {
+        args: ['--disable-search-engine-choice-screen']
+      }
     }
   ],
 

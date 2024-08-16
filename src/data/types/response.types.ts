@@ -1,4 +1,4 @@
 export interface IResponseFields {
-    IsSuccess: boolean;
-    ErrorMessage: string | null;
-  }
+  IsSuccess: boolean;
+  ErrorMessage: string | null;
+}

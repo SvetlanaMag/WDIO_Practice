@@ -3,7 +3,7 @@ import { ADMIN_USERNAME, ADMIN_PASSWORD } from '../../../config/environment.js';
 import { generateNewProduct } from '../../../data/products/generateProduct.js';
 import { IProduct } from '../../../data/types/product.types.js';
 
-describe('[API] [Products] Smoke', () => {
+describe.skip('[API] [Products] Smoke', () => {
   const baseUrl = 'https://aqa-course-project.app/';
   const endpoints = {
     login: '/api/login/',

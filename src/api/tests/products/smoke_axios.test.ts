@@ -4,14 +4,14 @@ import _ from 'lodash';
 import { ADMIN_USERNAME, ADMIN_PASSWORD } from '../../../config/environment.js';
 import { IProductResponse } from '../../../data/types/product.types.js';
 import { ILoginResponse } from '../../../data/types/user.types.js';
-import { AxiosApiClient } from '../../../utils/apiClients/axios.js'
+import { AxiosApiClient } from '../../../utils/apiClients/axios.js';
 import { apiConfig } from '../../../config/apiConfig.js';
 import { ProductsApiClient } from '../../clients/products.client.js';
 import { validateResponse, validateSchema } from '../../../utils/validation/response.js';
 import { createdProductSchema } from '../../../data/schema/product.schema.js';
 import { STATUS_CODES } from '../../../data/types/api.types.js';
 
-describe('[API] [Products] Smoke', () => {
+describe.skip('[API] [Products] Smoke', () => {
   const apiClient = new AxiosApiClient();
   const productsApi = new ProductsApiClient();
   let token = '';

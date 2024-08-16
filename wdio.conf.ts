@@ -41,7 +41,8 @@ export const config: Options.Testrunner = {
   suites: {
     ui: ['./src/ui/tests/**/*.test.ts'],
     ui_products: ['./src/ui/tests/products/**/*.test.ts'],
-    ui_simple: ['./src/ui/tests/simple/**/*.test.ts']
+    ui_simple: ['./src/ui/tests/simple/**/*.test.ts'],
+    api: ['./src/api/tests/**/*.test.ts']
   },
   // Patterns to exclude.
   exclude: [
@@ -63,7 +64,7 @@ export const config: Options.Testrunner = {
   // and 30 processes will get spawned. The property handles how many capabilities
   // from the same test should run tests.
   //
-  //maxInstances: +process.env.MAX_INSTANCES! ?? 1,
+  maxInstances: +process.env.MAX_INSTANCES! ?? 1,
   //
   // If you have trouble getting all important capabilities together, check out the
   // Sauce Labs platform configurator - a great tool to configure your capabilities:
@@ -73,7 +74,7 @@ export const config: Options.Testrunner = {
     {
       browserName: 'chrome',
       'goog:chromeOptions': {
-        args: ['--disable-search-engine-choice-screen']
+        args: ['--disable-search-engine-choice-screen', 'headless']
       }
     }
   ],
